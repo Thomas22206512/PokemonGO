@@ -36,6 +36,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .navbar-right {
     margin-right: 150px;
     display: flex;
@@ -75,8 +76,8 @@ a.navbar-items:hover {
 .profil:hover {
     color: #1ed760;
 }
-/* Section pub */
 
+/* Section pub */
 .pub {
     padding-left: 160px;
     color: white;
@@ -130,6 +131,8 @@ h2 {
 
 .bouton {
     padding-bottom: 80px;
+    display: flex; /* Par défaut, on garde l'alignement horizontal */
+    gap: 20px; /* Espacement entre les deux boutons */
 }
 
 .condition {
@@ -217,11 +220,135 @@ h4 {
     background: radial-gradient(circle at 100% 100%,#000 0,#000 7.4px,transparent 0) 0 0/12.4px 12.4px no-repeat,radial-gradient(circle at 0 100%,#000 0,#000 7.4px,transparent 0) 100% 0/12.4px 12.4px no-repeat,radial-gradient(circle at 100% 0,#000 0,#000 7.4px,transparent 0) 0 100%/12.4px 12.4px no-repeat,radial-gradient(circle at 0 0,#000 0,#000 7.4px,transparent 0) 100% 100%/12.4px 12.4px no-repeat,linear-gradient(#000,#000) 50% 50%/calc(100% - 10px) calc(100% - 24.8px) no-repeat,linear-gradient(#000,#000) 50% 50%/calc(100% - 24.8px) calc(100% - 10px) no-repeat,linear-gradient(54deg,#b00d6e,#ac0e6f 50%,#084791 98%);
     border-radius: 12.4px;
     padding: 15px 15px 15px 45px;
-    
 }
 
 /* ---------------------------------- */
 
 .reso:hover {
     background-color: #1ed760
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+    /* Pour les tablettes et les appareils plus petits */
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-title {
+        font-size: 28px;
+    }
+
+    .navbar-items {
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+
+    .button-start,
+    .button-offre {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .ecouter {
+        font-size: 24px;
+    }
+
+    .pub {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .profil {
+        margin-top: 20px;
+    }
+
+    .end {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .sylvanus {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Pour les téléphones */
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+
+    .navbar-items {
+        font-size: 16px;
+        padding: 12px 8px;
+    }
+
+    .bouton {
+        flex-direction: column; /* Aligner les boutons verticalement uniquement sur les petits écrans */
+        gap: 15px; /* Réduire l'espace entre les boutons */
+    }
+    
+    .button-start,
+    .button-offre {
+        width: 100%; /* Faire en sorte que les boutons prennent toute la largeur disponible */
+        text-align: center; /* Centrer le texte dans les boutons */
+    }
+
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .ecouter {
+        font-size: 20px;
+    }
+
+    .pub {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .condition {
+        font-size: 12px;
+        padding-bottom: 100px;
+    }
+
+    .end {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .sylvanus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profil {
+        margin-bottom: 15px;
+    }
 }

@@ -69,7 +69,7 @@
 }
 
 a.navbar-items:hover {
-    color: #1ed760;
+    color: #cf3737;
 }
 
 .profil:hover {
@@ -80,7 +80,7 @@ a.navbar-items:hover {
 .pub {
     padding-left: 160px;
     color: white;
-    background-color: #1d75de;
+    background-color: #da4933;
     display: flexbox;
     align-items: baseline;
 }
@@ -137,11 +137,11 @@ h2 {
 }
 
 .button-offre:hover {
-    background-color: #1966c4;
+    background-color: #f4a261;
 }
 
 .button-start:hover {
-    background-color: #1966c4;
+    background-color: #f4a261;
 }
 
 .pourquoi {

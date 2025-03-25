@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligue Super</title>
+    <style>
+        
+        * {
+            margin: 0 auto;
+            font-family: CircularSp,spotify-circular,Helvetica,Arial,sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+            align-content: space-between;
+        }
+
+        .logo {
+            height: 55px;
+            margin: 25px;
+        }
+
+        .logo-title {
+            margin-left: -20px;
+            line-height: inherit;
+            letter-spacing: -2px;
+            font-size: 35px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: white;
+        }
+
+        .navbar-left {
+            margin-left: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-right {
+            margin-right: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profil {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user-logo {
+            margin-left: 20px;
+            height: 35px;
+            padding: 7px;
+            border: 2px solid white;
+            border-radius: 40px;
+        }
+
+        .navbar-items {
+            text-decoration: none;
+            color: white;
+            padding: 28px 17px;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -1px;
+            line-height: inherit;
+            letter-spacing: 0;
+        }
+
+        a.navbar-items:hover {
+            color: #cf3737;
+        }
+
+        .profil:hover {
+            color: #1ed760;
+        }
+
+        .content {
+        padding-left: 10px;
+        padding-right: 10px;
+        }
+        
+        .tenebres {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: #3c3c3c;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            align-items: baseline;
+        }
+
+        .box {
+            background: #e0e0e0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .tenebres div + div {
+            margin-top: 18px;
+            margin-left: auto;
+        }
+
+        .type_image {
+            width : 30%;
+            height : 30%;
+            margin: 10px;
+        }
+
+        .pokemon_name {
+            margin-left: -20px;
+            line-height: inherit;
+            letter-spacing: -2px;
+            font-size: 35px;
+            font-weight: 600;
+            text-decoration: none;
+            color: black;
+        }
+        .attaques_immediate {
+            background: #e0e0e0;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin-top: 10px;
+        }
+
+        .attaques_immediate div + div {
+            margin-top: 8px;
+        }
+
+        .attaque_tenebres{
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(75, 75, 75);
+        }
+
+        .attaque_vol{
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(165, 226, 255);
+        }
+
+        .attaque_spectre {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(130, 109, 224);
+        }
+
+        .attaque_combats {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(255, 80, 80);
+        }
+
+        .attaque_psy {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(255, 125, 231);
+        }
+
+        .attaque_normal {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(166, 166, 166);
+        }
+
+        .attaque_fee {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(254, 162, 248);
+        }
+
+        .attaque_roche {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            font-weight: 450;
+            padding: 10px 45px 10px 45px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: rgb(198, 159, 80);
+        }
+
+        /* responsive */
+        @media only screen and (max-width: 768px) {
+            /* Pour les tablettes et les appareils plus petits */
+            
+            .tenebres {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar-left,
+            .navbar-right {
+                margin-left: 0;
+                margin-right: 0;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-title {
+                font-size: 28px;
+            }
+
+            .navbar-items {
+                font-size: 18px;
+                padding: 15px 10px;
+            }
+
+            .button-start,
+            .button-offre {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            .ecouter {
+                font-size: 24px;
+            }
+
+            .pub {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .profil {
+                margin-top: 20px;
+            }
+
+            .end {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+
+            .sylvanus {
+                flex-direction: column;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            /* Pour les téléphones */
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .logo {
+                height: 50px;
+            }
+
+            .logo-title {
+                font-size: 24px;
+            }
+
+            .navbar-items {
+                font-size: 16px;
+                padding: 12px 8px;
+            }
+
+            .bouton {
+                flex-direction: column; /* Aligner les boutons verticalement uniquement sur les petits écrans */
+                gap: 15px; /* Réduire l'espace entre les boutons */
+            }
+            
+            .button-start,
+            .button-offre {
+                width: 100%; /* Faire en sorte que les boutons prennent toute la largeur disponible */
+                text-align: center; /* Centrer le texte dans les boutons */
+            }
+
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .ecouter {
+                font-size: 20px;
+            }
+
+            .pub {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .condition {
+                font-size: 12px;
+                padding-bottom: 100px;
+            }
+
+            .end {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .sylvanus {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profil {
+                margin-bottom: 15px;
+            }
+
+            .tenebres {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<div class="navbar" id="Sylvanus">
+    <div class="navbar-left">
+        <img src="../images/legacy.jpg" class="logo" alt="logo PokeStat">
+        <a href="../index.html" class="logo-title">
+            PokeStat
+        </a>
+        <p class="copyright">
+            ©
+        </p>
+    </div>
+    <div class="navbar-right">
+        <a href="LigueSuper.html" class="navbar-items">Ligue Super</a>
+        <a href="pages/assistance.html" class="navbar-items">Ligue Hyper</a>
+        <a href="pages/telecharger.html" class="navbar-items">Ligue Master</a>
+        <p class="navbar-items">|</p>
+        <div class="profil">
+            <img src="../images/user.png" alt="logo de profile" class="user-logo">
+            <a href="pages/user" class="navbar-items">Profil</a>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <h2>Ligue Super</h2>
+</div>
+<div class="tenebres">
+    <div class="box">
+        <p class="pokemon_name">Vaututrice</p>
+        <div class="types">
+            <img src="https://www.pokepedia.fr/images/thumb/b/bc/Miniature_Type_T%C3%A9n%C3%A8bres_EV.png/160px-Miniature_Type_T%C3%A9n%C3%A8bres_EV.png" alt="ténèbres" class="type_image">
+            <img src="https://www.pokepedia.fr/images/thumb/9/99/Miniature_Type_Vol_EV.png/160px-Miniature_Type_Vol_EV.png" alt="vol" class="type_image">
+        </div>
+        <img src="https://pvpoke-re.com/pokeImagesSet180/mandibuzz.webp" alt="vaututrice" class="pokemon_image">
+        <p class="rang"> Rang 1 : Lvl 27.5 0/13/15 - CP 1498</p>
+        <div class="attaques">
+            <div class="attaques_immediate">
+                <div>Attaques Immediate</div>
+                <div class="attaque_tenebres">Aboiement *</div>
+                <div class="attaque_vol">Lame d’Air</div>
+            </div>
+            <div class="attaques_immediate">
+                <div>Attaques Chargées</div>
+                <div class="attaque_vol">Aéropique *</div>
+                <div class="attaque_tenebres">Vibrobscur *</div>
+                <div class="attaque_tenebres">Tricherie</div>
+                <div class="attaque_spectre">Ball’Ombre</div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <p class="pokemon_name">Sepiatroce</p>
+        <div class="types">
+            <img src="https://www.pokepedia.fr/images/thumb/b/bc/Miniature_Type_T%C3%A9n%C3%A8bres_EV.png/160px-Miniature_Type_T%C3%A9n%C3%A8bres_EV.png" alt="ténèbres" class="type_image">
+            <img src="https://www.pokepedia.fr/images/thumb/8/81/Miniature_Type_Psy_EV.png/160px-Miniature_Type_Psy_EV.png" alt="spy" class="type_image">
+        </div>
+        <img src="https://pvpoke-re.com/pokeImagesSet180/malamar.webp" alt="Sepiatroce" class="pokemon_image">
+        <p class="rang"> Rang 1 : Lvl 24.5 0/15/9 - CP 1500</p>
+        <div class="attaques">
+            <div class="attaques_immediate">
+                <div>Attaques Immediate</div>
+                <div class="attaque_psy">Vague Psy *</div>
+                <div class="attaque_psy">Coupe Psycho</div>
+                <div class="attaque_vol">Picpic</div>
+            </div>
+            <div class="attaques_immediate">
+                <div>Attaques Chargées</div>
+                <div class="attaque_tenebres">Tricherie *</div>
+                <div class="attaque_combats">Surpuissance *</div>
+                <div class="attaque_psy">Rafale Spy</div>
+                <div class="attaque_normal">Ultralaser</div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <p class="pokemon_name">Tenefix (Obscurs)</p>
+        <div class="types">
+            <img src="https://www.pokepedia.fr/images/thumb/b/bc/Miniature_Type_T%C3%A9n%C3%A8bres_EV.png/160px-Miniature_Type_T%C3%A9n%C3%A8bres_EV.png" alt="ténèbres" class="type_image">
+            <img src="https://www.pokepedia.fr/images/thumb/4/43/Miniature_Type_Spectre_EV.png/160px-Miniature_Type_Spectre_EV.png" alt="spectre" class="type_image">
+        </div>
+        <img src="https://pvpoke-re.com/pokeImagesSet180/sableye.webp" alt="Tenefix (Obscurs)" class="pokemon_image">
+        <p class="rang"> Rang 1 : Lvl 49.5 0/15/15 - CP 1499</p>
+        <div class="attaques">
+            <div class="attaques_immediate">
+                <div>Attaques Immediate</div>
+                <div class="attaque_spectre">Griffe Ombre *</div>
+                <div class="attaque_tenebres">Feinte</div>
+            </div>
+            <div class="attaques_immediate">
+                <div>Attaques Chargées</div>
+                <div class="attaque_tenebres">Tricherie *</div>
+                <div class="attaque_fee">Eclat Magique *</div>
+                <div class="attaque_roche">Rayon Gemme</div>
+                <div class="attaque_spectre">Ombre Portée</div>
+                <div class="attaque_normal">Frustration</div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
